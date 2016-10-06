@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-app="myApp" ng-controller="topCtrl">
+<button id="add" ng-click="addTab()"> Добавить закладку.</button>
+<div id="wpapper">
+    <tabs></tabs>
+</div>
+
+<div ui-view></div>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/mainCtrl.js"></script>
+<script src="js/controllers/contactsCtrl.js"></script>
+<script src="js/controllers/infoCtrl.js"></script>
+<script src="components/tabs/component.js"></script>
+</body>
+</html>

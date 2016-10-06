@@ -1,0 +1,52 @@
+.tabs-content ul {
+    list-style: none;
+}
+
+.tabs-content p {
+    width: 90%;
+    height:300px;
+    padding: 3%;
+    display: block;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    width: 14%;
+    text-align: center;
+    background-color: aqua;
+    margin-right: 0.3%;
+}
+.tabs  li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: green;
+    height: 30px;
+    display: block;
+    padding-top: 8%;
+    float: left;
+    padding-left: 6%;
+}
+
+ul.tabs {
+    margin-bottom: 0;
+    padding-left: 3%;
+}
+
+.tabs  li {
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+}
+
+.tabs li:hover {
+    background-color: red;
+    color: white;
+}
+
+.tabs li a:hover{
+    color: white;
+}
+
+ul {
+    margin-top: 0;
+}
