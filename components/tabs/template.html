@@ -1,7 +1,6 @@
 <ul class="tabs">
-    <li ng-repeat = "tab in tabs">
+    <li ng-repeat = "tab in tabs" id = {{tab.value}}>
         <a ui-sref = "tabs({ cat: 'tab-name', page: tab.value })" ui-sref-active = "active">{{tab.value}}</a>
-        <button class = "dell">{{dell}}</button>
+        <button class = "dell"  ng-click = "remove(tab.value)">{{dell}}</button>
     </li>
 </ul>
-
