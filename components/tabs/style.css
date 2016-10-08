@@ -2,13 +2,6 @@
     list-style: none;
 }
 
-.tabs-content p {
-    width: 90%;
-    height:300px;
-    padding: 3%;
-    display: block;
-}
-
 li {
     list-style-type: none;
     display: inline-block;

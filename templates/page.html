@@ -1,0 +1,11 @@
+<div class="tabs-content" ng-click = "hideElemChange(); saveText()">
+    <p>{{text}}</p>
+    <div>
+        <textarea autofocus onclick = "event.stopPropagation()" rows="7" cols="45" name="text" ng-model="myText" ng-hide="hideElem">
+        </textarea>
+        <p>{{myText}}</p>
+    </div>
+</div>
+
+
+
