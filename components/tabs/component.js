@@ -9,16 +9,8 @@ myApp.controller('tabsCtrl', function ($scope, Items) {
     $scope.tabs = Items;
     $scope.remove2 = true;
 
-    $scope.removeNum = function (id){
-        //debugger;
-        $scope.pos = $scope.tabs.map(function(e) {
-            return e.value; }).indexOf(id);
-        $scope.removeElem($scope.pos);
-    };
-
-    $scope.removeElem = function(num){
+    $scope.removeNum = function (tab){
         debugger;
-        Items.splice(num, 1);
+        Items.splice(Items.indexOf(tab), 1);
     };
-
 });

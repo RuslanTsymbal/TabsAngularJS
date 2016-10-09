@@ -5,9 +5,9 @@ myApp = angular.module('myApp', ['ui.router']);
 myApp.factory('Items', function () {
     debugger;
     var items = [];
-    items.add = function (a) {
+    items.add = function (tabName) {
         //debugger;
-        var itemsVal = {value: a};
+        var itemsVal = {value: tabName};
         items.push(itemsVal);
         return items;
     };
@@ -28,33 +28,22 @@ myApp.config(function ($stateProvider) {
             $scope.myText;
             $scope.hideElemChange = function () {
                 //debugger;
-                if ($scope.hideElem == true) {
-                    $scope.hideElem = false;
-                } else {
-                    $scope.hideElem = true;
-                }
+                $scope.hideElem = !$scope.hideElem;
             };
 
             $scope.saveText = function () {
                 //debugger;
                 if ($scope.myText !== undefined) {
-                  // debugger;
-                    $scope.valueKey = localStorage.getItem("text_0");
-                    if ($scope.valueKey == null) {
-                        $scope.saveKey("lastIndex", 0);
-                        $scope.key = "text_" + 0;
-                        $scope.saveKey($scope.key, $scope.myText);
-                    } else {
-                        $scope.lastIndexLS = +localStorage.getItem("lastIndex",  $scope.lastIndexLS) + 1;
-                        localStorage.setItem("lastIndex", $scope.lastIndexLS);
-                        $scope.key = "text_" + $scope.lastIndexLS;
-                        $scope.saveKey($scope.key, $scope.myText)
-                    }
+                  debugger;
+                    var lastIndex = +localStorage.getItem("lastIndex")+1 || 1;
+                    var key = "text_" + lastIndex;
+                    saveKey("lastIndex",lastIndex);
+                    saveKey(key, $scope.myText);
                 }
             };
             /*---Сохраняем ключи в localStorage---*/
 
-            $scope.saveKey = function (key, value) {
+            function saveKey (key, value) {
                 localStorage.setItem(key, value);
             }
         }
@@ -64,9 +53,10 @@ myApp.config(function ($stateProvider) {
 /*---Получаем новое название Закладки---*/
 
 myApp.controller('topCtrl', function ($scope, Items) {
-    //debugger;
+    debugger;
     var newValueTab;
     $scope.addTab = function () {
+        debugger;
         newValueTab = prompt("Введите новое название закладки");
         items = Items.add(newValueTab);
     };
