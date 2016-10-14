@@ -1,9 +1,9 @@
 @import "../components/tabs/style.css" screen;
 
 .tabs-content {
-    width:  80%;
+    width: 80%;
     height: 200px;
-    overflow:hidden;
+    overflow: hidden;
     background-color: aqua;
     margin-left: 3%;
 }
@@ -40,6 +40,7 @@
     background-color: red;
     color: white;
 }
+
 #dell-tabs:hover {
     background-color: green;
     color: white;
@@ -65,10 +66,16 @@ button.dell:hover {
     padding-top: 1%;
 }
 
-/*-----временно--------*/
-
-textarea{
+textarea {
     display: block;
     float: left;
+}
+
+p.contents {
+    text-transform: uppercase;
+}
+
+.red {
+    color: red;
 }
 

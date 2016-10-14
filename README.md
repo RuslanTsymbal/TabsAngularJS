@@ -1,1 +1,4 @@
-# TabsAngularJS
+# Tabs
+AngularJS
+Цымбал Руслан
+
